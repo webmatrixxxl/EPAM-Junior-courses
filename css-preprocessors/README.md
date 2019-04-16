@@ -23,7 +23,7 @@ Part 1:
   - Figure out how the things work and if you don't get something write your questions and we will discuse them
 
 Part 2:
-  - Checkout https://www.sitepoint.com/sass-theming-neverending-story/
+  - Checkout https://www.sitepoint.com/sass-theming-neverending-story/ (you can research others as well)
   - Choose theming method
   - Apply it to the project (page background, "main" and "second" sections color and button styles)
   - Upload your implementation in github and send me links
