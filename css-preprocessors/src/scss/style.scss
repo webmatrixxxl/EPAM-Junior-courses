@@ -6,7 +6,6 @@ $header-spacing: 75px;
 html,
 body {
     min-height: 100%;
-
 }
 
 body {
@@ -120,9 +119,7 @@ body {
         @include section-bg() {
             background-image: url('/assets/svg/shape--bubbles.svg'), linear-gradient(to left, #59c5e6, #58c5e4);
             background-position: center;
-        }
-
-        ;
+        };
 
         #{$section} {
             &-text {
