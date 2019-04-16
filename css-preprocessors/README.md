@@ -1,4 +1,4 @@
-# CSS preprocessors live codding demo
+# CSS preprocessors live coding demo
 
 
 This is the simple page we codded at the end of the presentation. It is refined and complited.
