@@ -19,7 +19,7 @@ To run it you need to clone the project and execute this comands to run SASS com
 # Homework
     
 Part 1: 
-  - Look cearfuly at the project code - selectors naming, nesting, reusage, @mixins, @content, if. 
+  - Look cearfuly at the project code - **selectors naming, nesting, reusage, @mixins, @content, if, variables**
   - Figure out how the things work and if you don't get something write your questions and we will discuse them
 
 Part 2:
