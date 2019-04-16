@@ -1,0 +1,223 @@
+@import '_reboot';
+
+$container-width: 1300px;
+$header-spacing: 75px;
+
+html,
+body {
+    min-height: 100%;
+
+}
+
+body {
+    font-family: Roboto;
+    background-image: linear-gradient(to bottom, #d073b6, #303a7e);
+}
+
+@mixin main-container() {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 135px;
+}
+
+@mixin section-bg($offsetY: 0, $flip: false) {
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: inherit;
+        top: $offsetY;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+        transform: scaleY(if($flip, -1, 1));
+        z-index: -1;
+
+        @content;
+    }
+}
+
+
+.header {
+    @include main-container();
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: $header-spacing;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    &-logo {
+        color: #fff;
+        font-size: 32px;
+    }
+
+    .btn {
+        &  +  .btn {
+            margin-left: 20px;
+        }
+    }
+}
+
+.section {
+    $section: &;
+    @include main-container();
+
+    position: relative;
+    color: #fff;
+
+    &-holder {
+        @include main-container();
+
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+        background-color: #f5f1f3;
+        transform-style: preserve-3d;
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        position: relative;
+    }
+
+    &-left {
+        flex: 1 0 auto;
+        width: 100%;
+        max-width: 566px;
+
+        & + #{$section}-right {
+            margin-left: 35px;
+        }
+    }
+
+    &-right {
+        flex: 0 1 auto;
+    }
+
+    &-title {
+        font-size: 36px;
+        line-height: 1.17;
+        margin-bottom: 16px;
+    }
+
+    &-text {
+        line-height: 1.63;
+    }
+
+    &-main {
+        padding-top: 100px + $header-spacing;
+        min-height: 735px;
+        z-index: 1;
+
+        @include section-bg() {
+            background-image: url('/assets/svg/shape--bubbles.svg'), linear-gradient(to left, #59c5e6, #58c5e4);
+            background-position: center;
+        }
+
+        ;
+
+        #{$section} {
+            &-text {
+                opacity: 0.73;
+                margin-top: 25px;
+                margin-bottom: 38px;
+            }
+
+            &-img {
+                width: 100%;
+                max-width: 368px;
+            }
+        }
+    }
+
+    &-second {
+        @include section-bg(-150px, true);
+
+        background-color: #fff;
+        transform-style: preserve-3d;
+        padding-bottom: 150px;
+
+        #{$section} {
+            &-wrapper {
+                transform: translate3d(0, 0, 1px);
+            }
+
+            &-title {
+                color: #000;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -6px;
+                    left: 0;
+                    width: 20px;
+                    height: 4px;
+                    background-color: #fa60ad;
+                    border-radius: 10px;
+                }
+            }
+
+            &-text {
+                color: #8194b3;
+            }
+
+            &-img {
+                margin-top: -115px;
+                width: 100%;
+                max-width: 486px;
+            }
+        }
+
+        &-text {
+            color: #8194B3;
+        }
+    }
+}
+
+
+.btn {
+    $btn: &;
+
+    font-size: 14px;
+    text-align: right;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    padding: 2px 13px;
+    cursor: pointer;
+    $border-size: 1px;
+    border: $border-size solid transparent;
+
+    &:hover,
+    &.active {
+        border-radius: 18px;
+        border: $border-size solid #fff;
+    }
+
+    &-rounded {
+        border-radius: 18px;
+    }
+
+    &-pink {
+        border-radius: 25px;
+        box-shadow: 0 4px 12px 0 rgba(68, 86, 101, 0.2);
+        border: solid 0 #979797;
+        background-color: #fa60ad;
+        padding: 12px 40px;
+
+        &:hover,
+        &.active {
+            border: 0;
+        }
+    }
+}

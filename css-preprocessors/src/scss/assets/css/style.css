@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,700|Underdog&subset=cyrillic");
+@keyframes movingCircles {
+  0% {
+    z-index: 1;
+    transform: translate(0, 0);
+  }
+  50% {
+    z-index: 1;
+    transform: translate(120%, 0);
+  }
+  50.1% {
+    z-index: 0;
+    transform: translate(120%, 0);
+  }
+  100% {
+    z-index: 0;
+    transform: translate(0, 0);
+  }
+}
+h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+}
+
+.btn.black {
+  color: #36393a;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #36393a;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.black .text {
+  margin: 7px;
+}
+.btn.black:before, .btn.black:after {
+  content: "";
+  border-color: #36393a;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.black:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.black:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.black:enabled:hover:before, .btn.black:enabled:hover:after, .btn.black:enabled:active:before, .btn.black:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #36393a;
+}
+.btn.black:enabled:hover, .btn.black:enabled:active {
+  color: #fff;
+  background-color: #36393a;
+  border-color: #36393a;
+}
+.btn.black:focus {
+  outline: none;
+}
+.btn.black:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.black:disabled:before, .btn.black:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.black:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.black.loading {
+  pointer-events: none;
+  color: #fff;
+  background-color: #36393a;
+}
+.btn.black.loading:before, .btn.black.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #36393a;
+}
+.btn.black.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.black.loading .loader-dots:before, .btn.black.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #a3a3a3;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.black.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #fff;
+  transform: translate(120%, 0);
+}
+
+.btn.red {
+  color: #f3726c;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f3726c;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.red .text {
+  margin: 7px;
+}
+.btn.red:before, .btn.red:after {
+  content: "";
+  border-color: #f3726c;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.red:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.red:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.red:enabled:hover:before, .btn.red:enabled:hover:after, .btn.red:enabled:active:before, .btn.red:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #f3726c;
+}
+.btn.red:enabled:hover, .btn.red:enabled:active {
+  color: #fff;
+  background-color: #f3726c;
+  border-color: #f3726c;
+}
+.btn.red:focus {
+  outline: none;
+}
+.btn.red:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.red:disabled:before, .btn.red:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.red:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.red.loading {
+  color: #f3726c;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f3726c;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+  pointer-events: none;
+  color: #fff;
+  background-color: #f3726c;
+}
+.btn.red.loading .text {
+  margin: 7px;
+}
+.btn.red.loading:before, .btn.red.loading:after {
+  content: "";
+  border-color: #f3726c;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.red.loading:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.red.loading:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.red.loading:enabled:hover:before, .btn.red.loading:enabled:hover:after, .btn.red.loading:enabled:active:before, .btn.red.loading:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #f3726c;
+}
+.btn.red.loading:enabled:hover, .btn.red.loading:enabled:active {
+  color: #fff;
+  background-color: #f3726c;
+  border-color: #f3726c;
+}
+.btn.red.loading:focus {
+  outline: none;
+}
+.btn.red.loading:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.red.loading:disabled:before, .btn.red.loading:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.red.loading:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.red.loading:before, .btn.red.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #f3726c;
+}
+.btn.red.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.red.loading .loader-dots:before, .btn.red.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f48379;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.red.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #e36058;
+  transform: translate(120%, 0);
+}
+
+.btn.orange {
+  color: #f8af7c;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f8af7c;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.orange .text {
+  margin: 7px;
+}
+.btn.orange:before, .btn.orange:after {
+  content: "";
+  border-color: #f8af7c;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.orange:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.orange:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.orange:enabled:hover:before, .btn.orange:enabled:hover:after, .btn.orange:enabled:active:before, .btn.orange:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #f8af7c;
+}
+.btn.orange:enabled:hover, .btn.orange:enabled:active {
+  color: #fff;
+  background-color: #f8af7c;
+  border-color: #f8af7c;
+}
+.btn.orange:focus {
+  outline: none;
+}
+.btn.orange:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.orange:disabled:before, .btn.orange:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.orange:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.orange.loading {
+  pointer-events: none;
+  color: #fff;
+  background-color: #f8af7c;
+}
+.btn.orange.loading:before, .btn.orange.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #f8af7c;
+}
+.btn.orange.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.orange.loading .loader-dots:before, .btn.orange.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fcc396;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.orange.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #ef9a61;
+  transform: translate(120%, 0);
+}
+
+.btn.yellow {
+  color: #feca76;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #feca76;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.yellow .text {
+  margin: 7px;
+}
+.btn.yellow:before, .btn.yellow:after {
+  content: "";
+  border-color: #feca76;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.yellow:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.yellow:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.yellow:enabled:hover:before, .btn.yellow:enabled:hover:after, .btn.yellow:enabled:active:before, .btn.yellow:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #feca76;
+}
+.btn.yellow:enabled:hover, .btn.yellow:enabled:active {
+  color: #fff;
+  background-color: #feca76;
+  border-color: #feca76;
+}
+.btn.yellow:focus {
+  outline: none;
+}
+.btn.yellow:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.yellow:disabled:before, .btn.yellow:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.yellow:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.yellow.loading {
+  pointer-events: none;
+  color: #fff;
+  background-color: #feca76;
+}
+.btn.yellow.loading:before, .btn.yellow.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #feca76;
+}
+.btn.yellow.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.yellow.loading .loader-dots:before, .btn.yellow.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffd99a;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.yellow.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #fcba63;
+  transform: translate(120%, 0);
+}
+
+.btn.green {
+  color: #97cd79;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #97cd79;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.green .text {
+  margin: 7px;
+}
+.btn.green:before, .btn.green:after {
+  content: "";
+  border-color: #97cd79;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.green:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.green:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.green:enabled:hover:before, .btn.green:enabled:hover:after, .btn.green:enabled:active:before, .btn.green:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #97cd79;
+}
+.btn.green:enabled:hover, .btn.green:enabled:active {
+  color: #fff;
+  background-color: #97cd79;
+  border-color: #97cd79;
+}
+.btn.green:focus {
+  outline: none;
+}
+.btn.green:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.green:disabled:before, .btn.green:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.green:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.green.loading {
+  pointer-events: none;
+  color: #fff;
+  background-color: #97cd79;
+}
+.btn.green.loading:before, .btn.green.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #97cd79;
+}
+.btn.green.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.green.loading .loader-dots:before, .btn.green.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #aad69b;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.green.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #86ba6f;
+  transform: translate(120%, 0);
+}
+
+.btn.blue {
+  color: #8dcee4;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #8dcee4;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.blue .text {
+  margin: 7px;
+}
+.btn.blue:before, .btn.blue:after {
+  content: "";
+  border-color: #8dcee4;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.blue:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.blue:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.blue:enabled:hover:before, .btn.blue:enabled:hover:after, .btn.blue:enabled:active:before, .btn.blue:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #8dcee4;
+}
+.btn.blue:enabled:hover, .btn.blue:enabled:active {
+  color: #fff;
+  background-color: #8dcee4;
+  border-color: #8dcee4;
+}
+.btn.blue:focus {
+  outline: none;
+}
+.btn.blue:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.blue:disabled:before, .btn.blue:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.blue:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.blue.loading {
+  pointer-events: none;
+  color: #fff;
+  background-color: #8dcee4;
+}
+.btn.blue.loading:before, .btn.blue.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #8dcee4;
+}
+.btn.blue.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.blue.loading .loader-dots:before, .btn.blue.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #a6deeb;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.blue.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #79c2e2;
+  transform: translate(120%, 0);
+}
+
+.btn.purple {
+  color: #aca5ce;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #aca5ce;
+  position: relative;
+  margin: 1em;
+  display: inline-flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.btn.purple .text {
+  margin: 7px;
+}
+.btn.purple:before, .btn.purple:after {
+  content: "";
+  border-color: #aca5ce;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn.purple:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+.btn.purple:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.btn.purple:enabled:hover:before, .btn.purple:enabled:hover:after, .btn.purple:enabled:active:before, .btn.purple:enabled:active:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #aca5ce;
+}
+.btn.purple:enabled:hover, .btn.purple:enabled:active {
+  color: #fff;
+  background-color: #aca5ce;
+  border-color: #aca5ce;
+}
+.btn.purple:focus {
+  outline: none;
+}
+.btn.purple:disabled {
+  cursor: default;
+  color: #a3a3a3;
+  background-color: #fff;
+  border-color: #a3a3a3;
+}
+.btn.purple:disabled:before, .btn.purple:disabled:after {
+  border-color: #a3a3a3;
+}
+.btn.purple:not(.loading) .loader-dots {
+  display: none;
+}
+.btn.purple.loading {
+  pointer-events: none;
+  color: #fff;
+  background-color: #aca5ce;
+}
+.btn.purple.loading:before, .btn.purple.loading:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #aca5ce;
+}
+.btn.purple.loading .loader-dots {
+  position: relative;
+  display: flex;
+  margin: 7px;
+  width: 16px;
+  height: 18px;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.btn.purple.loading .loader-dots:before, .btn.purple.loading .loader-dots:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #bbb6d4;
+  animation: movingCircles 2s infinite ease-in-out;
+}
+.btn.purple.loading .loader-dots:after {
+  animation-delay: -1s;
+  background-color: #9790ba;
+  transform: translate(120%, 0);
+}
+
+/*# sourceMappingURL=style.css.map */
